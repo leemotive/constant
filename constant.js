@@ -14,7 +14,7 @@ const proxyConstant = new Proxy(constant, {
     return false;
   },
   defineProperty() {
-    return false;
+    return proxyConstant;
   }
 });
 

@@ -18,7 +18,7 @@ import constant, {parse} from 'simple-const'
 constant.const_name = 'const_value';
 
 //取值
-console.log(constant.const_name);
+console.log(constant.const_name); // const_value
 
 // 不可以重复赋值
 constant.const_name = 'new value'; // throw Error 'duplicate assignment'
@@ -26,10 +26,12 @@ constant.const_name = 'new value'; // throw Error 'duplicate assignment'
 // 不可以delete
 delete constant.const_name; // false
 
-// 不可以通过defineProperty修改
+// 通过defineProperty或者defineProperties修改不生效
 Object.defineProperty(constant, 'const_name', {
   value: 'new value'
-}); // false
+});
+console.log(constant.const_name); // const_value
+
 
 
 // 通过parse解析键值对常量
