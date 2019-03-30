@@ -1,6 +1,6 @@
 {
   "name": "simple-const",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "常量定义",
   "main": "constant.js",
   "module": "es/constant.js",
