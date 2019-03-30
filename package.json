@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "常量定义",
   "main": "constant.js",
+  "module": "es/constant.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf es lib dist && yarn es && yarn lib && yarn dist && yarn min",
