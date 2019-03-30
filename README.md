@@ -3,16 +3,16 @@
 ## 安装
 npm安装
 ```bash
-$ npm install const.js
+$ npm install simple-const
 ```
 或者使用yarn
 ```bash
-$ yarn add const.js
+$ yarn add simple-const
 ```
 
 ## 使用
 ```javascript
-import constant, {parse} from 'const.js'
+import constant, {parse} from 'simple-const'
 
 //直接给constant赋值
 constant.const_name = 'const_value';

@@ -1,5 +1,5 @@
 {
-  "name": "const.js",
+  "name": "simple-const",
   "version": "1.0.0",
   "description": "常量定义",
   "main": "constant.js",
