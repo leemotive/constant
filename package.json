@@ -1,0 +1,48 @@
+{
+  "name": "const.js",
+  "version": "1.0.0",
+  "description": "常量定义",
+  "main": "constant.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf es lib dist && yarn es && yarn lib && yarn dist && yarn min",
+    "es": "MODULES=false babel constant.js -d es",
+    "lib": "MODULES=commonjs babel constant.js -d lib",
+    "dist": "MODULES=umd babel constant.js -d dist",
+    "min": "uglifyjs dist/constant.js -o dist/constant.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leemotive/constant.git"
+  },
+  "keywords": [
+    "proxy",
+    "constant"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "author": {
+    "name": "leemotive",
+    "email": "wstation@163.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leemotive/constant/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "uglify-js": "^3.5.2"
+  },
+  "homepage": "https://github.com/leemotive/constant#readme"
+}
