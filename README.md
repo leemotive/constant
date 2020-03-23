@@ -21,7 +21,7 @@ constant.const_name = 'const_value';
 console.log(constant.const_name); // const_value
 
 // 不可以重复赋值
-constant.const_name = 'new value'; // throw Error 'duplicate assignment'
+constant.const_name = 'new value'; // not change
 
 // 不可以delete
 delete constant.const_name; // false
